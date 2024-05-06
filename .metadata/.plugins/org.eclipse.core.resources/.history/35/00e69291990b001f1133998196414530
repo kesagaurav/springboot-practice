@@ -1,0 +1,7 @@
+package com.gaurav.exceptions;
+
+public class ErrorClass {
+
+	private int error;
+	private String message;
+}

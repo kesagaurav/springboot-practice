@@ -1,0 +1,14 @@
+package com.gaurav.exceptions;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+@RestControllerAdvice
+public class ControllerException {
+	@ExceptionHandler(EmployeeException.class)
+	public static ResponseEntity<ErrorClass> employeeException(EmployeeException e){
+		ErrorClass ec=new ErrorClass();
+		ec.setMessage(e.getMessage());
+	}
+}
